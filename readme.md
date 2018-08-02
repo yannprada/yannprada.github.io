@@ -2,7 +2,7 @@
 
 *Here are some projects I've worked on:*
 
-### [mouse-rotation](https://yannprada.github.io/mouse-rotation)
+### [mouse-rotation](https://yannprada.github.io/mouse-rotation/docs)
 
 A demo of these two modules working together:
 
@@ -13,8 +13,9 @@ A demo of these two modules working together:
 - src/MouseRotationTracker.js
   - listen for mouse rotation around the center of a DOM element
 
-[website](https://yannprada.github.io/mouse-rotation) - 
-[code](https://github.com/yannprada/mouse-rotation)
+### [cookie-garden-helper](https://github.com/yannprada/cookie-garden-helper)
+
+A mod for Cookie Clicker
 
 ### [gw2-api-test](https://yannprada.github.io/gw2-api-test/index.html)
 

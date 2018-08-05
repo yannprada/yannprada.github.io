@@ -2,6 +2,10 @@
 
 *Here are some projects I've worked on:*
 
+### [brainfuckjs](https://yannprada.github.io/brainfuckjs)
+
+Online JS Brainfuck interpreter.
+
 ### [mouse-rotation](https://yannprada.github.io/mouse-rotation/docs)
 
 A demo of these two modules working together:

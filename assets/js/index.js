@@ -11,7 +11,6 @@ async function getRepositoryDetails(name, owner) {
   data.branches_count = data.branches.length;
   data.commits = await getJson(`${url}/commits`);
   data.commits_count = data.commits.length;
-  console.log(data);
   return data;
 }
 

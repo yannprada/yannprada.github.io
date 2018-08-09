@@ -12,7 +12,6 @@ function buildRepository(repository) {
     <h3>${repository.name}</h3>
   </a>
   <p class="lead">${repository.description}</p>
-  {% octicon repo-forked %}
 </div>
   `;
 };

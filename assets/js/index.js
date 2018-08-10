@@ -25,15 +25,18 @@ function buildRepository(repository) {
     <div class="row">
       <div class="col">
         <div class="branches">
+          <ion-icon name="git-branch"></ion-icon>
           Branches:
           ${repository.branches_count}
         </div>
         <div class="commits">
+          <ion-icon name="git-commit"></ion-icon>
           Commits:
           ${repository.commits_count}
         </div>
         ${repository.forks_count ? `
         <div class="forks">
+          <ion-icon src="assets/svg/octicon-repo-forked.svg"></ion-icon>
           Forks:
           ${repository.forks_count}
         </div>

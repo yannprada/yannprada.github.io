@@ -9,6 +9,9 @@ async function getRepositoryDetails(name, owner) {
   let data = await getJson(url);
   data.branches = await getJson(`${url}/branches`);
   data.branches_count = data.branches.length;
+  for (let branch of data.branches) {
+    branch.url = `${data.html_url}/tree/${branch.name}`;
+  }
   data.commits = await getJson(`${url}/commits`);
   data.commits_count = data.commits.length;
   return data;
@@ -24,29 +27,15 @@ function buildRepository(repository) {
   <div class="container">
     <div class="row">
       <div class="col">
+        ${repository.branches_count > 1 ? `
         <div class="branches">
           <ion-icon src="assets/svg/octicon/git-branch.svg"></ion-icon>
           Branches:
-          ${repository.branches_count}
-        </div>
-        <div class="commits">
-          <ion-icon src="assets/svg/octicon/git-commit.svg"></ion-icon>
-          Commits:
-          ${repository.commits_count}
-        </div>
-        ${repository.forks_count ? `
-        <div class="forks">
-          <ion-icon src="assets/svg/octicon/repo-forked.svg"></ion-icon>
-          Forks:
-          ${repository.forks_count}
+          ${repository.branches.map(branch => `
+          <a href="${branch.url}" class="badge badge-success">${branch.name}</a>
+          `).join('')}
         </div>
         `: ``}
-      </div>
-      <div class="col text-right">
-        <div class="subs">
-          Subscribers:
-          ${repository.subscribers_count}
-        </div>
       </div>
     </div>
   </div>

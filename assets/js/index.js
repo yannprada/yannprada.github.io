@@ -19,23 +19,25 @@ async function getRepositoryDetails(name, owner) {
 
 function buildRepository(repository) {
   return `
-<div class="repository col">
-  <a href="${repository.homepage || repository.html_url}">
-    <h3>${repository.name}</h3>
-  </a>
-  <p class="lead">${repository.description}</p>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        ${repository.branches_count > 1 ? `
-        <div class="branches">
-          <ion-icon src="assets/svg/octicon/git-branch.svg"></ion-icon>
-          Branches:
-          ${repository.branches.map(branch => `
-          <a href="${branch.url}" class="badge badge-success">${branch.name}</a>
-          `).join('')}
+<div class="mb-3 col-xl-3 col-md-4 col-xs-6">
+  <div class="repository">
+    <a href="${repository.homepage || repository.html_url}">
+      <h4 class="title">${repository.name}</h4>
+    </a>
+    <p class="lead">${repository.description}</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          ${repository.branches_count > 1 ? `
+          <div class="branches">
+            <ion-icon src="assets/svg/octicon/git-branch.svg"></ion-icon>
+            Branches:
+            ${repository.branches.map(branch => `
+            <a href="${branch.url}" class="badge badge-success">${branch.name}</a>
+            `).join('')}
+          </div>
+          `: ``}
         </div>
-        `: ``}
       </div>
     </div>
   </div>

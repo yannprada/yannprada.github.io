@@ -1,16 +1,32 @@
 
 :root {
-  --footer-bg-color: rgba(0, 0, 0, 0.1);
+  --secondary-bg-color: #e9ecefdd;
   --link-color: #008000;
   --link-hover-color: #00c000;
+}
+
+footer,
+.jumbotron {
+  background-color: var(--secondary-bg-color);
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: var(--footer-bg-color);
 }
+
+.repository {
+  border: 1px solid var(--secondary-bg-color);
+  padding: 0.5em;
+}
+
+.repository .title {
+  word-wrap: break-word;
+}
+
+
+/* links */
 
 a {
   color: var(--link-color);
@@ -24,6 +40,9 @@ a:hover {
 a:focus {
   outline-color: var(--link-hover-color);
 }
+
+
+/* progress bar */
 
 @keyframes loading {
   from {width: 0;}

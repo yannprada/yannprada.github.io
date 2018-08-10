@@ -2,4 +2,4 @@ A summary of my personal projects
 
 ### TODO
 
-- icons
+- rework stats: branches, forks, etc..

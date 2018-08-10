@@ -51,7 +51,7 @@ function buildRepository(repository) {
   `;
 };
 
-async function buildRepositories(container, owner, repositories) {
+async function buildRepositories(container, owner, repositories, $progressBar) {
   let elements = [];
   for (let name of repositories) {
     elements.push(await getRepositoryDetails(name, owner));
@@ -59,12 +59,18 @@ async function buildRepositories(container, owner, repositories) {
   for (let element of elements) {
     container.insertAdjacentHTML('beforeend', buildRepository(element));
   };
+  $progressBar.classList.add('hide');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  buildRepositories(document.getElementById('projects'), 'yannprada', [
-    'cookie-garden-helper',
-    'mouse-rotation',
-    'brainfuckjs',
-  ]);
+  buildRepositories(
+    document.getElementById('projects'),
+    'yannprada',
+    [
+      'cookie-garden-helper',
+      'mouse-rotation',
+      'brainfuckjs',
+    ],
+    document.getElementById('projectsLoading')
+  );
 });

@@ -24,3 +24,19 @@ a:hover {
 a:focus {
   outline-color: var(--link-hover-color);
 }
+
+@keyframes loading {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+.progress-bar {
+  width: 0;
+  animation: loading 3s infinite;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s linear, visibility 2s;
+}

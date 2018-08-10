@@ -1,20 +1,26 @@
 
+:root {
+  --footer-bg-color: rgba(0, 0, 0, 0.1);
+  --link-color: #008000;
+  --link-hover-color: #00c000;
+}
+
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--footer-bg-color);
 }
 
 a {
-  color: #008000;
+  color: var(--link-color);
 }
 
 a:hover {
-  color: #00c000;
+  color: var(--link-hover-color);
   text-decoration: none;
 }
 
 a:focus {
-  outline-color: #00c000;
+  outline-color: var(--link-hover-color);
 }

@@ -12,8 +12,6 @@ async function getRepositoryDetails(name, owner) {
   for (let branch of data.branches) {
     branch.url = `${data.html_url}/tree/${branch.name}`;
   }
-  data.commits = await getJson(`${url}/commits`);
-  data.commits_count = data.commits.length;
   return data;
 }
 

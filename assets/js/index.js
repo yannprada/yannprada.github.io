@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
       'cookie-garden-helper',
       'mouse-rotation',
       'brainfuckjs',
-      'yannprada.github.io',
     ],
     document.getElementById('projectsLoading')
   );

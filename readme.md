@@ -1,5 +1,3 @@
-A summary of my personal projects
+Presentation of my projects.
 
-### TODO
-
-wow, grow your imagination already...
+Projects details are fetched from the github API.

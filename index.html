@@ -13,12 +13,9 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>yannprada's projects</title>
   </head>
   <body>
-    <main>
+    <header>
       <div class="jumbotron">
         <div class="container">
-          <div id="projectsLoading" class="progress mt-4 w-25 float-right">
-            <div class="progress-bar bg-success"></div>
-          </div>
           <h1 class="mb-3">
             <small>yannprada / </small>
             projects
@@ -28,8 +25,10 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
           </div>
         </div>
       </div>
-      <div class="container">
-        <div id="projects" class="row"></div>
+    </header>
+    <main class="container">
+      <div id="projects" class="row">
+        <div class="spinner" id="projectsLoading"></div>
       </div>
     </main>
 
